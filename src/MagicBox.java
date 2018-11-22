@@ -14,6 +14,7 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
@@ -69,44 +70,55 @@ MediaPalace group= new MediaPalace();
 		}
 	}
 
-	@Override
+	
 	public void paintComponent(Graphics g) {
 		g.drawImage(backgroundImage, 0, 0, null);
 	System.out.println("how r u");
 	}
 
-	@Override
+
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
 		//System.out.println("hello");
 		System.out.println(Integer.toHexString(backgroundImage.getRGB(e.getX(), e.getY())));
+		String color = Integer.toHexString(backgroundImage.getRGB(e.getX(), e.getY()));
+if(color.equals("ffaf8e5b")) {
+	JOptionPane.showMessageDialog(null, "You found a secret.");}
+String color1 = Integer.toHexString(backgroundImage.getRGB(e.getX(), e.getY()));
+if(color1.equals("ffe0c17e")) {
+String wha = JOptionPane.showInputDialog("I have a question for you, its more of a riddle. A person was wrestling a shark. One of them was wearing a tie. Who is wearing the tie?");
+if(wha.equalsIgnoreCase("yes")) {
+	JOptionPane.showMessageDialog(null, "Wait how did you know?");
+}
+}
 	}
 
-	@Override
+
 	public void mousePressed(MouseEvent e) {
 		
 		// TODO Auto-generated method stub
 		//System.out.println("hi");
 	}
 
-	@Override
+	
 	public void mouseReleased(MouseEvent e) {
 		// TODO Auto-generated method stub
 		//System.out.println("good");
 	}
 
-	@Override
+
 	public void mouseEntered(MouseEvent e) {
 		// TODO Auto-generated method stub
 		//System.out.println("how bout u");
 	}
 
-	@Override
+	
 	public void mouseExited(MouseEvent e) {
 		// TODO Auto-generated method stub
 		System.out.println("gud, gud");
 	}
 
+	
 }
 
 
