@@ -1,11 +1,19 @@
+//why is this so buggy, as it seems that the constuctor is expecting so many {}, it it almost 
+//crazy, not sure if it is due to out of date launcher, misprogramming, or if it is some other 
+//error caused by the internal files or other factors of code. I hope I will be able to fix it
+//once and if it is fixed delete this extensive report/recommendation/note. 
+//If possible work this out later or at home.
 int x=200; 
 int y=200;
 void setup(){
   size(400,400);
 }
 void draw(){
+  
+  Car car1 = new Car(200,200,200,3);
+Car car2 = new Car(200,200,200,3);
+Car car3 = new Car(200,200,200,3);
 background(209,100,10);
-Car car = new Car(100,100,300,20);
 fill(200,0,0);
 ellipse(x,y,50,50);
 NOESCAPE();
@@ -49,17 +57,16 @@ int carx;
 int cary;
 int carsize;
 int carspeed;
-int mph=carspeed;
-int x;
-Car(carx,cary,carsize,carspeed){
-this.carx=x
-this.cary=y
-this.carsize=carsize
-this.carspeed=carspeed}
-} 
-
-void display()
-{
+Car car = new Car(carx,cary,carsize,carspeed){
+this.carx=carx;
+this.cary=y;
+this.carsize=carsize;
+this.carspeed=carspeed;
+}
+ void display(){
       fill(0,255,0);
       rect(carx , cary, carsize, 50);
+}
+
+
 }
