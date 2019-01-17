@@ -1,8 +1,3 @@
-//why is this so buggy, as it seems that the constuctor is expecting so many {}, it it almost 
-//crazy, not sure if it is due to out of date launcher, misprogramming, or if it is some other 
-//error caused by the internal files or other factors of code. I hope I will be able to fix it
-//once and if it is fixed delete this extensive report/recommendation/note. 
-//If possible work this out later or at home.
 int x=200; 
 int y=200;
 void setup(){
@@ -10,9 +5,12 @@ void setup(){
 }
 void draw(){
   
-  Car car1 = new Car(200,200,200,3);
+  Car car1 = new Car(200,300,200,3);
+car1.display();
 Car car2 = new Car(200,200,200,3);
-Car car3 = new Car(200,200,200,3);
+car2.display();
+Car car3 = new Car(200,100,200,3);
+car3.display();
 background(209,100,10);
 fill(200,0,0);
 ellipse(x,y,50,50);
@@ -57,9 +55,9 @@ int carx;
 int cary;
 int carsize;
 int carspeed;
-Car car = new Car(carx,cary,carsize,carspeed){
+Car(int carx,int cary,int carsize,int carspeed){
 this.carx=carx;
-this.cary=y;
+this.cary=cary;
 this.carsize=carsize;
 this.carspeed=carspeed;
 }
